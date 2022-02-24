@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<article lang="">
+  <orderedlist>
+    <listitem>
+      <para>These notes target win10. It is necessary to have Python installed before installing jupyter. Currently all is working well with latest python, version 3.10.2.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Do not use conda. Strip everything mentioning conda from the machine. (Think of the gigs you’ll save.)</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Do not install with 'pip install notebook' . This installs to interior of Python folder and the paths to the effective custom.css are not available. Instead install with 'pip install jupyter'.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>The custom.css page at <ulink url="https://gist.github.com/atsukoba/beb7ec3fd1927dacf2f6df4b0f209f22">https://gist.github.com/atsukoba/beb7ec3fd1927dacf2f6df4b0f209f22</ulink> is the only one found which works right out the box, giving effective and direct access to fonts for Code, <emphasis>and</emphasis> Code Output. It goes in the folder \Users\'name'\.jupyter\custom. The 'custom' folder may need to be created. Note that in the  css page, the change output area style  section describes no specific font attributes. Therefore it is necessary to paste in the three applicable ones: family, size, and weight, taking them from a neighboring section.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Instead of putting the desired fonts into a separate font folder within .jupyter/custom, putting them right into the main 'custom' folder is preferable. The 'fonts' folder is unnecessary. Normally, only one font face, such as ‘regular’ is required, alternatives being cast on the fly. If shopping for a Code font, consider Courier Prime in 700 units of weight.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>The last three bullets above apply only to Code cells, unfortunately. It is still important to be able to change the font characteristics of Markdown cells. The image below shows the governing code corresponding to a vanilla Markdown cell. It is actually specifying addition of a colored rectangle superimposed with text, but the color used is so light that it reads as white. As you can see, font family, size, and weight can be assigned. In this case an extremely low weight is chosen, because Bookerly font is already semi-bold (you are reading it now). Note that the font color tag must be placed directly before the first text word.</para>
+    </listitem>
+  </orderedlist>
+  <para>
+    <inlinegraphic fileref="embedded:Image1" width="4.5701inch" depth="1.9717inch"/>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>Other concerns. To get the notebook to open in a non-Edge browser, edit the Properties dialog of one of the runtimes in C:\Users\'name'\AppData\Roaming\jupyter\runtime with directions that it be opened by the desired browser.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Remember that any changes for a notebook must be saved (File &gt; Save_and_Checkpoint) before clicking on 'Reload'.</para>
+    </listitem>
+    <listitem>
+      <para>When saving a file, it is important to include the .ipynb extension, otherwise Jupyter cannot decipher it properly on opening.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Instead of disseminating via PDF it is preferable to disseminate with raw notebooks. Give people the true goods.  It is recognized that in some cases it is necessary to resort to PDF.</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Matplotlib has changed recently. The three lines below are common ones when using matplotlib:import matplotlib.pyplot as pltimport matplotlib.ticker as ticker%config InlineBackend.figure_formats = ['svg']</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>The matplotlib svg terminal is as easy to set up as any other. The svg format rules. When converting a pdf to svg in Inkscape, select Poppler/Cairo import. Find a tutorial describing use of Object &gt; Clip to free the content area from the parent sheet, then resize the supporting document to reduce margins to minimum before exporting as svg. If the image imported into Jupyter needs to have small left margin, for example, make sure there is lots of righthand blank space in the svg when exported from Inkscape. (Or find a smarter way to position images.)</para>
+    </listitem>
+  </orderedlist>
+  <orderedlist>
+    <listitem>
+      <para>Ridiculously obvious but still . . . When running a notebook, remember that it is necessary to Shift + Enter to reawaken a python cell. </para>
+    </listitem>
+  </orderedlist>
+  <para>Last edited on 24 Feb 2022</para>
+  <para/>
+  <para/>
+</article>
