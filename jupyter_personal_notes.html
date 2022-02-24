@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Windows)"/>
+	<meta name="created" content="2022-02-22T20:07:46.135000000"/>
+	<meta name="changed" content="2022-02-24T14:02:08.529000000"/>
+	<style type="text/css">
+		@page { size: 8.5in 14in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+		em { font-style: italic }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr">
+<ul><li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">These
+	notes target win10. It is necessary to have Python installed before
+	installing jupyter. Currently all is working well with latest
+	python, version 3.10.2.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Do
+	not use conda. Strip everything mentioning conda from the machine.
+	(Think of the gigs you&rsquo;ll save.)</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Do
+	not install with 'pip install notebook' . This installs to interior
+	of Python folder and the paths to the effective custom.css are not
+	available. Instead install with 'pip install jupyter'.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">The
+	custom.css page at
+	<a href="https://gist.github.com/atsukoba/beb7ec3fd1927dacf2f6df4b0f209f22">https://gist.github.com/atsukoba/beb7ec3fd1927dacf2f6df4b0f209f22</a>
+	is the only one found which works right out the box, giving
+	effective and direct access to fonts for Code, </font></font><em><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">and</font></font></em><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">
+	Code Output. It goes in the folder \Users\'name'\.jupyter\custom.
+	The 'custom' folder may need to be created. </font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Note
+	that in the  </font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">css
+	page, the </font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt"><b>change
+	output area style</b></font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">
+	 section </font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">describes
+	</font></font><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">no
+	specific font attributes. Therefore it is necessary to paste in the
+	three applicable ones: family, size, and weight, taking them from a
+	neighboring section.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Instead
+	of putting the desired fonts into a separate font folder within
+	.jupyter/custom, putting them right into the main 'custom' folder is
+	preferable. The 'fonts' folder is unnecessary. Normally, only one
+	font face, such as &lsquo;regular&rsquo; is required, alternatives
+	being cast on the fly. If shopping for a Code font, consider Courier
+	Prime in 700 units of weight.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">The
+	last three bullets above apply only to Code cells, unfortunately. It
+	is still important to be able to change the font characteristics of
+	Markdown cells. The image below shows the governing code
+	corresponding to a vanilla Markdown cell. It is actually specifying
+	addition of a colored rectangle superimposed with text, but the
+	color used is so light that it reads as white. As you can see, font
+	family, size, and weight can be assigned. In this case an extremely
+	low weight is chosen, because Bookerly font is already semi-bold
+	(you are reading it now). Note that the font color tag must be
+	placed directly before the first text word.</font></font></p>
+</ul>
+<p style="margin-bottom: 0in"><img src="jupyter_personal_notes_html_4721d004ab3b930.gif" name="Image1" align="left" width="987" height="426">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Other
+	concerns. To get the notebook to open in a non-Edge browser, edit
+	the Properties dialog of one of the runtimes in
+	C:\Users\'name'\AppData\Roaming\jupyter\runtime with directions that
+	it be opened by the desired browser.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Remember
+	that any changes for a notebook must be saved (File &gt;
+	Save_and_Checkpoint) before clicking on 'Reload'.</font></font></p>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">When
+	saving a file, it is important to include the .ipynb extension,
+	otherwise Jupyter cannot decipher it properly on opening.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Instead
+	of disseminating via PDF it is preferable to disseminate with raw
+	notebooks. Give people the true goods.  It is recognized that in
+	some cases it is necessary to resort to PDF.</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Matplotlib
+	has changed recently. The three lines below are common ones when
+	using matplotlib:<br/>
+import matplotlib.pyplot as plt<br/>
+import
+	matplotlib.ticker as ticker<br/>
+%config
+	InlineBackend.figure_formats = ['svg']</font></font></p>
+</ul>
+<ul>
+	<li><p style="margin-bottom: 0in"><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">The
+	matplotlib svg terminal is as easy to set up as any other. The svg
+	format rules. When converting a pdf to svg in Inkscape, select
+	Poppler/Cairo import. Find a tutorial describing use of Object &gt;
+	Clip to free the content area from the parent sheet, then resize the
+	supporting document to reduce margins to minimum before exporting as
+	svg. If the image imported into Jupyter needs to have small left
+	margin, for example, make sure there is lots of righthand blank
+	space in the svg when exported from Inkscape. (Or find a smarter way
+	to position images.)</font></font></p>
+</ul>
+<ul>
+	<li><p><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Ridiculously
+	obvious but still . . . When running a notebook, remember that it is
+	necessary to Shift + Enter to reawaken a python cell. </font></font>
+	</p>
+</ul>
+<p><font face="Bookerly, serif"><font size="1" style="font-size: 8pt">Last
+edited on 24 Feb 2022</font></font></p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>
