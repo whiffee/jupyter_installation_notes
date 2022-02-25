@@ -1,0 +1,21 @@
+
+
+https://gist.github.com/atsukoba/beb7ec3fd1927dacf2f6df4b0f209f22
+
+*****************************************************************
+
+<div style="background: #FEFEFE;
+            font-family: Bookerly;
+            font-size: 16px; 
+            font-weight: 100;
+            padding: 16px 2px 20px 5px; 
+            border: 1px solid #FEFEFE; 
+            margin-left: 1px;
+            margin-right: 50px;"
+          
+ <font color='blue'>Text as shown in a generic markdown cell.<br>
+ </font>  
+  
+</div>
+
+
